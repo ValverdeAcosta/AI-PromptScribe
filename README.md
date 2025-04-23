@@ -1,5 +1,5 @@
 # AI-PromptScribe
-This is a quick project for helping users to build their own prompts following the 5W-1H rule in order to optimize the answers they will get from a Language's Model like ChatGPT, DeepSeek and many others.
+This is a quick project for helping users to build their own prompts following the 5W-1H rule (what, who, when, where, which, how) in order to optimize the answers they will get from a Language's Model like ChatGPT, DeepSeek and many others.
 
 # Installing & Deploy
 `git clone https://github.com/ValverdeAcosta/AI-PromptScribe.git`
