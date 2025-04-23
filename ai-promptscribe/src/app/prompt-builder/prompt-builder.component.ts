@@ -47,13 +47,13 @@ export class PromptBuilderComponent {
   constructor(private clipboard: Clipboard) {}
 
   buildPrompt(): string {
-    return `${this.prompt.what} ${
-      this.prompt.who ? 'para ' + this.prompt.who : ''
-    } ${this.prompt.when ? 'en ' + this.prompt.when : ''} ${
-      this.prompt.where ? 'en ' + this.prompt.where : ''
-    } ${this.prompt.which ? 'usando ' + this.prompt.which : ''} ${
-      this.prompt.how ? 'de forma ' + this.prompt.how : ''
-    }`.trim();
+    return `${this.prompt.what.trim()} ${
+      this.prompt.who.trim() ? '' + this.prompt.who : ''
+    } ${this.prompt.when ? '' + this.prompt.when : ''} ${
+      this.prompt.where ? '' + this.prompt.where : ''
+    } ${this.prompt.which ? '' + this.prompt.which : ''} ${
+      this.prompt.how ? '' + this.prompt.how : ''
+    }`;
   }
 
   copyPrompt(): void {
