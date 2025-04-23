@@ -20,13 +20,13 @@
   </form>
 
   <div class="prompt-builder__preview">
-    <h2 class="prompt-builder__subtitle">📄 Vista Previa</h2>
+    <h2 class="prompt-builder__subtitle">📄 Preview</h2>
     <div class="prompt-builder__output">
       {{ buildPrompt() }}
     </div>
     <button class="prompt-builder__copy-btn" (click)="copyPrompt()">
-      📋 Copiar al portapapeles
+      📋 Copy to Clipboard
     </button>
-    <p *ngIf="copied" class="prompt-builder__success">¡Prompt copiado!</p>
+    <p *ngIf="copied" class="prompt-builder__success">¡Prompt copied!</p>
   </div>
 </div>
