@@ -6,7 +6,7 @@ This is a quick project for helping users to build their own prompts following t
 
 `npm install`
 
-`ng serve`
+`ng serve` or `npm run start`
 
 # How You can Use the tool
 The inputs can guide you following the examples in order to fill the Preview and then copy it on clipboard.
