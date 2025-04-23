@@ -1,0 +1,32 @@
+<div class="prompt-builder">
+  <h1 class="prompt-builder__title">🧠 AI Prompt Builder</h1>
+
+  <form class="prompt-builder__form">
+    <div class="prompt-builder__field" *ngFor="let field of fields">
+      <label class="prompt-builder__label">
+        {{ field.label }}
+        <input
+          class="prompt-builder__input"
+          type="text"
+          [placeholder]="field.example"
+          [(ngModel)]="prompt[field.key]"
+          name="{{ field.key }}"
+        />
+        <small class="prompt-builder__example">
+          Example: {{ field.example }}
+        </small>
+      </label>
+    </div>
+  </form>
+
+  <div class="prompt-builder__preview">
+    <h2 class="prompt-builder__subtitle">📄 Vista Previa</h2>
+    <div class="prompt-builder__output">
+      {{ buildPrompt() }}
+    </div>
+    <button class="prompt-builder__copy-btn" (click)="copyPrompt()">
+      📋 Copiar al portapapeles
+    </button>
+    <p *ngIf="copied" class="prompt-builder__success">¡Prompt copiado!</p>
+  </div>
+</div>
