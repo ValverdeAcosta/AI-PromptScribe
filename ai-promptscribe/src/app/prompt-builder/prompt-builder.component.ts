@@ -3,7 +3,7 @@ import { Clipboard } from '@angular/cdk/clipboard';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
-type PromptField = 'what' | 'who' | 'when' | 'where' | 'which' | 'how';
+type PromptField = 'what' | 'who' | 'when' | 'where' | 'why' | 'how';
 
 @Component({
   selector: 'app-prompt-builder',
@@ -19,7 +19,7 @@ export class PromptBuilderComponent {
     who: '',
     when: '',
     where: '',
-    which: '',
+    why: '',
     how: '',
   };
 
@@ -37,11 +37,11 @@ export class PromptBuilderComponent {
       example: 'In the context of European history',
     },
     {
-      key: 'which',
-      label: 'Which',
-      example: 'Use formal tone and specific examples',
+      key: 'why',
+      label: 'Why',
+      example: 'To entertain and educate the reader',
     },
-    { key: 'how', label: 'How', example: 'Explain it step-by-step' },
+    { key: 'how', label: 'How', example: 'With a simple language' },
   ];
 
   constructor(private clipboard: Clipboard) {}
@@ -51,8 +51,8 @@ export class PromptBuilderComponent {
       this.prompt.who.trim() ? '' + this.prompt.who : ''
     } ${this.prompt.when ? '' + this.prompt.when : ''} ${
       this.prompt.where ? '' + this.prompt.where : ''
-    } ${this.prompt.which ? '' + this.prompt.which : ''} ${
-      this.prompt.how ? '' + this.prompt.how : ''
+    } ${this.prompt.why ? '' + this.prompt.why : ''} ${
+      this.prompt.how ? '.' + this.prompt.how : ''
     }`;
   }
 
